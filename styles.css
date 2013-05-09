@@ -1,0 +1,163 @@
+body{
+	background-color: #e1e1e1;
+	font: normal 12px Calibri;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 	899px){
+	body{
+		font-size: 10px;
+	}
+}
+
+ *{
+	padding: 0;
+	margin: 0;
+ }
+
+div img{
+	max-width: 100%;
+	display: inline-block;
+}
+
+ div.container{
+ 	width: 93.7%;
+ 	max-width: 	1200px; 	
+ 	margin: 0 auto;
+ 	background-color: #fff;
+ 	box-shadow: 0px 0px 13px rgba(0,0,0,0.3);
+ 	border: 1px solid #bbb; 	
+ }
+
+header,
+ div.header{
+ 	height: 120px;
+ 	background-image: url('img/lines.png');
+ 	background-repeat: no-repeat;
+ 	/*background-position: 0 10px;*/
+ }
+
+ header img,
+ div.header img{
+ 	padding: 25px 0 0 45px;
+ }
+
+ header h1,
+ div.header h1{
+ 	float: right;
+ 	color: #d52b1e;
+ 	font-size: 36px;
+ 	padding: 25px 25px 0 0;
+ 	font-weight: normal;
+ }
+
+ul.nav{
+ 	width: 100%;
+ 	display: table;
+ 	list-style: none;
+ 	border-top: 1px solid #DB0025;
+ 	border-bottom: 1px solid #DB0025;
+ 	background-color: #ff4c52;
+ }
+
+ul.nav li{
+ 	display: block;
+ 	float: right;
+ 	text-align: center;
+ 	font-size: 130%;
+ 	padding: 10px;
+ 	border-left: 1px solid #db0025;
+ 	border-right: 1px solid #ff5969;
+ 	color: #fff;
+}
+
+ul.nav li:hover{
+	background-color: #db0025;	
+	border-right: 1px solid #db0025;
+	cursor: pointer;
+}
+
+div.content{
+	margin-top: 20px;
+	min-height: 1000px;
+}
+
+div.content div.body{
+	padding: 20px;
+}
+
+footer,
+div.footer{
+	background-color: #ff4c52;
+	min-height: 200px;	
+}
+
+span.caption{
+	font-weight: bold;
+	font-size: 200%;
+	margin-bottom: 15px;
+	display: block;
+}
+
+/*Date list*/
+ul.date-list{
+	list-style: none;	
+}
+
+ul.date-list li{
+	position: relative;
+	padding: 35px 10px 10px 10px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+ul.date-list li:after{
+	display: block;
+	clear: both;
+	content: " ";
+}
+
+ul.date-list li div.date{
+	position: absolute;
+	padding: 5px;
+	background-color: #ff4c52;
+	border: 1px solid #d52b1e;
+	color: #fff;
+	left: -5px;
+	top: 5px;
+	font-size: 120%;
+}
+
+ul.date-list li span.header{
+	font-weight: bold;
+	font-size: 120%;
+	color: #333;
+}
+
+ul.date-list li a{
+	color: #d52b1e;
+	float: right;
+	padding-top: 10px;
+	text-decoration: none;
+	font-size: 120%;
+}
+
+/*Link list*/
+ul.link-list{
+	list-style: none;
+}
+
+ul.link-list li{
+	color: #d52b1e;
+	cursor: pointer;
+	font-size: 150%;
+}
+
+/*Teaser*/
+div.teaser{
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
