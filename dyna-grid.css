@@ -1,4 +1,4 @@
-div.container {
+﻿div.container {
   width: 93.7%;
   margin: 0 auto;
   max-width: 1200px;
@@ -10,9 +10,17 @@ div.container {
 .flex {
   margin-left: -2%;
 }
+.flex:after {
+  display: block;
+  clear: both;
+  content: " ";
+}
 @media (min-width: 1100px) {
   .xxl-m {
     margin-top: 2%;
+  }
+  .xxl-lb {
+    clear: left;
   }
   .xxl-h {
     display: none;
@@ -27,7 +35,7 @@ div.container {
     width: 23%;
   }
   .xxl-4 {
-    width: 32%;
+    width: 31.333333333%;
   }
   .xxl-5 {
     width: 39.666666667%;
@@ -58,6 +66,9 @@ div.container {
   .xl-m {
     margin-top: 2%;
   }
+  .xl-lb {
+    clear: left;
+  }
   .xl-h {
     display: none;
   }
@@ -71,7 +82,7 @@ div.container {
     width: 23%;
   }
   .xl-4 {
-    width: 32%;
+    width: 31.333333333%;
   }
   .xl-5 {
     width: 39.666666667%;
@@ -102,6 +113,9 @@ div.container {
   .l-m {
     margin-top: 2%;
   }
+  .l-lb {
+    clear: left;
+  }
   .l-h {
     display: none;
   }
@@ -115,7 +129,7 @@ div.container {
     width: 23%;
   }
   .l-4 {
-    width: 32%;
+    width: 31.333333333%;
   }
   .l-5 {
     width: 39.666666667%;

@@ -1,0 +1,16 @@
+﻿body{
+    margin-top: 50px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 93.7%;
+    max-width: 1200px;
+    background-color: #fafafa;
+    min-height: 800px;
+}
+
+.present{
+    background-color: lightblue;
+    min-height: 30px;
+}
