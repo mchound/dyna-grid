@@ -1,48 +1,79 @@
+// Base
+@document-max-width: 1200px;
+@document-width: 93.7%;
+
 @horizontal-margin: 2%;
 @vertical-margin: 2%;
 
+// Media rules
+@xxl-min: 1100px;
+@xl-max: 1099px;
+@xl-min: 900px;
+@l-max: 899px;
+@l-min: 700px;
+@m-max: 0px;
+@m-min: 0px;
+@s-max: 0px;
+@s-min: 0px;
+@phone: 699px;
+
 // Grid
 @columns-count: 12;
+@col-width: ((100 - @columns-count * @horizontal-margin) / @columns-count + @horizontal-margin);
 
-@col-1: 6.333333333%;
-@col-2: 14.666666667%;
-@col-3: 23%;
-@col-4: 32%;
-@col-5: 39.666666667%;
-@col-6: 48%;
-@col-7: 56.333333333%;
-@col-8: 64.666666667%;
-@col-9: 73%;
-@col-10: 81.333333333%;
-@col-11: 89.666666667%;
-@col-12: 98%;
+@col-1: (1 * @col-width - @horizontal-margin);//6.333333333%
+@col-2: (2 * @col-width - @horizontal-margin);//14.666666667%;
+@col-3: (3 * @col-width - @horizontal-margin);//23%;
+@col-4: (4 * @col-width - @horizontal-margin);//31.333333333%;
+@col-5: (5 * @col-width - @horizontal-margin);//39.666666667%;
+@col-6: (6 * @col-width - @horizontal-margin);//48%;
+@col-7: (7 * @col-width - @horizontal-margin);//56.333333333%;
+@col-8: (8 * @col-width - @horizontal-margin);//64.666666667%;
+@col-9: (9 * @col-width - @horizontal-margin);//73%;
+@col-10: (10 * @col-width - @horizontal-margin);//81.333333333%;
+@col-11: (11 * @col-width - @horizontal-margin);//89.666666667%;
+@col-12: (12 * @col-width - @horizontal-margin);//98%;
+@col-13: (13 * @col-width - @horizontal-margin);
+@col-14: (14 * @col-width - @horizontal-margin);
+@col-15: (15 * @col-width - @horizontal-margin);
+@col-16: (16 * @col-width - @horizontal-margin);
+ 
  
  div.container{
-	width: 93.7%;
+	width: @document-width;
 	margin: 0 auto;
-	max-width: 	1200px;
+	max-width: 	@document-max-width;
  }
   
  .col{
 	float: left;
 	margin-left: @horizontal-margin;
+	width: 100%;
 }
 
  .flex{
-	margin-left: (-1 * 2%);
+	margin-left: (-1 * @horizontal-margin);
+ }
+
+ .flex:after{
+ 	display: block;
+ 	content: " ";
+ 	clear: both;
  }
 
  
-@media (min-width: 1100px) {
+@media (min-width: @xxl-min) {
 	.xxl-m{
-  	margin-top: @vertical-margin;
-  	}
-
-  .xxl-h{
-  	display: none;
-  }
+	margin-top: @vertical-margin;
+	}
+	.xxl-h{
+	display: none;
+	}
+	.xxl-lb{
+	clear: both;
+	}
 	.xxl-1{
-		width: @col-1
+	width: @col-1
 	}
 	.xxl-2{
 	width: @col-2
@@ -77,31 +108,33 @@
 	.xxl-12{
 	width: @col-12
 	}
-	.xxl-13() when (@col-count = 16){
+	.xxl-13{
 	width: @col-13
 	}
-	.xxl-14() when (@col-count = 16){
+	.xxl-14{
 	width: @col-14
 	}
-	.xxl-15() when (@col-count = 16){
+	.xxl-15{
 	width: @col-15
 	}
-	.xxl-16() when (@col-count = 16){
+	.xxl-16{
 	width: @col-16
 	}
 }
 
-@media (max-width: 	1099px) and (min-width: 900px) {
+@media (max-width: 	@xl-max) and (min-width: @xl-min) {
 
 	.xl-m{
-  	margin-top: @vertical-margin;
-  	}
-
-  .xl-h{
-  	display: none;
-  }
+	margin-top: @vertical-margin;
+	}
+	.xl-h{
+	display: none;
+	}
+	.xl-lb{
+	clear: both;
+	}
 	.xl-1{
-		width: @col-1
+	width: @col-1
 	}
 	.xl-2{
 	width: @col-2
@@ -136,30 +169,32 @@
 	.xl-12{
 	width: @col-12
 	}
-	.xl-13() when (@col-count = 16){
+	.xl-13{
 	width: @col-13
 	}
-	.xl-14() when (@col-count = 16){
+	.xl-14{
 	width: @col-14
 	}
-	.xl-15() when (@col-count = 16){
+	.xl-15{
 	width: @col-15
 	}
-	.xl-16() when (@col-count = 16){
+	.xl-16{
 	width: @col-16
 	}
 }
 
-@media (max-width: 	899px) and (min-width: 700px) {
-.l-m{
-  	margin-top: @vertical-margin;
-  	}
-
-  .l-h{
-  	display: none;
-  }
+@media (max-width: 	@l-max) and (min-width: @l-min) {
+	.l-m{
+	margin-top: @vertical-margin;
+	}
+	.l-h{
+	display: none;
+	}
+	.l-lb{
+	clear: both;
+	}
 	.l-1{
-		width: @col-1
+	width: @col-1
 	}
 	.l-2{
 	width: @col-2
@@ -194,16 +229,26 @@
 	.l-12{
 	width: @col-12
 	}
-	.l-13() when (@col-count = 16){
+	.l-13{
 	width: @col-13
 	}
-	.l-14() when (@col-count = 16){
+	.l-14{
 	width: @col-14
 	}
-	.l-15() when (@col-count = 16){
+	.l-15{
 	width: @col-15
 	}
-	.l-16() when (@col-count = 16){
+	.l-16{
 	width: @col-16
+	}
+}
+
+@media (max-width: 	@phone){
+	.col{
+		margin-bottom: @vertical-margin;
+	}
+
+	.flex .col:last-child{
+		margin-bottom: 0;
 	}
 }
