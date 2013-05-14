@@ -1,5 +1,4 @@
-/*max: 1200px*/
-div.container {
+﻿div.container {
   width: 93.7%;
   margin: 0 auto;
   max-width: 1200px;
@@ -16,10 +15,14 @@ div.container {
   display: block;
   content: " ";
   clear: both;
+  content: " ";
 }
 @media (min-width: 1100px) {
   .xxl-m {
     margin-top: 2%;
+  }
+  .xxl-lb {
+    clear: left;
   }
   .xxl-h {
     display: none;
@@ -80,6 +83,9 @@ div.container {
   .xl-m {
     margin-top: 2%;
   }
+  .xl-lb {
+    clear: left;
+  }
   .xl-h {
     display: none;
   }
@@ -138,6 +144,9 @@ div.container {
 @media (max-width: 899px) and (min-width: 700px) {
   .l-m {
     margin-top: 2%;
+  }
+  .l-lb {
+    clear: left;
   }
   .l-h {
     display: none;
