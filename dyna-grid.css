@@ -484,7 +484,7 @@ div.container {
     width: 100%;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 899px) and (min-width: 800px) {
   .m-m {
     margin-top: 2%;
   }
@@ -640,7 +640,7 @@ div.container {
     width: 100%;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 799px) and (min-width: 700px) {
   .s-m {
     margin-top: 2%;
   }
